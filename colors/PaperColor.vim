@@ -1,9 +1,9 @@
 " Theme: PaperColor
-" Author: Nikyle Nguyen <NLKNguyen@MSN.com>
+" Authors: Nikyle Nguyen <NLKNguyen@MSN.com>, Manas Thakur <manasthakur17@gmail.com>
 " License: MIT
-" Source: http://github.com/NLKNguyen/papercolor-theme
+" Source: https://github.com/NLKNguyen/papercolor-theme, https://github.com/manasthakur/papercolor-theme
 
-let s:version = '0.9.x'
+let s:version = '1.0'
 
 " Note on navigating this source code:
 " - Use folding feature to collapse/uncollapse blocks of marked code
@@ -47,7 +47,7 @@ fun! s:register_default_theme()
         \       'color07' : ['#444444', '238'],
         \       'color08' : ['#bcbcbc', '250'],
         \       'color09' : ['#d70000', '160'],
-        \       'color10' : ['#d70087', '162'],
+        \       'color10' : ['#d70087', '125'],
         \       'color11' : ['#8700af', '91'],
         \       'color12' : ['#d75f00', '166'],
         \       'color13' : ['#d75f00', '166'],
@@ -64,7 +64,7 @@ fun! s:register_default_theme()
         \       'popupmenu_fg' : ['#444444', '238'],
         \       'popupmenu_bg' : ['#d0d0d0', '252'],
         \       'search_fg' : ['#444444', '238'],
-        \       'search_bg' : ['#ffff5f', '227'],
+        \       'search_bg' : ['#d7afaf', '187'],
         \       'linenumber_fg' : ['#b2b2b2', '249'],
         \       'linenumber_bg' : ['#eeeeee', '255'],
         \       'vertsplit_fg' : ['#005f87', '24'],
@@ -82,9 +82,9 @@ fun! s:register_default_theme()
         \       'visual_fg' : ['#eeeeee', '255'],
         \       'visual_bg' : ['#0087af', '31'],
         \       'folded_fg' : ['#0087af', '31'],
-        \       'folded_bg' : ['#afd7ff', '153'],
+        \       'folded_bg' : ['#dadada', '253'],
         \       'wildmenu_fg': ['#444444', '238'],
-        \       'wildmenu_bg': ['#ffff00', '226'],
+        \       'wildmenu_bg': ['#d7d787', '187'],
         \       'spellbad':   ['#ffafd7', '218'],
         \       'spellcap':   ['#ffffaf', '229'],
         \       'spellrare':  ['#afff87', '156'],
@@ -109,96 +109,6 @@ fun! s:register_default_theme()
         \       'buftabline_active_bg':   ['#005faf', '25'],
         \       'buftabline_inactive_fg': ['#eeeeee', '255'],
         \       'buftabline_inactive_bg': ['#0087af', '31']
-        \     }
-        \   }
-
-  " TODO: idea for subtheme options
-  " let s:themes['default'].light.subtheme = {
-  "       \     'alternative' : {
-  "       \         'options' : {
-  "       \           'transparent_background': 1
-  "       \         },
-  "       \         'palette' : {
-  "       \         }
-  "       \     }
-  "       \ }
-
-  let s:themes['default'].dark = {
-        \     'NO_CONVERSION': 1,
-        \     'TEST_256_COLOR_CONSISTENCY' : 1,
-        \     'palette' : {
-        \       'color00' : ['#1c1c1c', '234'],
-        \       'color01' : ['#af005f', '125'],
-        \       'color02' : ['#5faf00', '70'],
-        \       'color03' : ['#d7af5f', '179'],
-        \       'color04' : ['#5fafd7', '74'],
-        \       'color05' : ['#808080', '244'],
-        \       'color06' : ['#d7875f', '173'],
-        \       'color07' : ['#d0d0d0', '252'],
-        \       'color08' : ['#585858', '240'],
-        \       'color09' : ['#5faf5f', '71'],
-        \       'color10' : ['#afd700', '148'],
-        \       'color11' : ['#af87d7', '140'],
-        \       'color12' : ['#ffaf00', '214'],
-        \       'color13' : ['#ff5faf', '205'],
-        \       'color14' : ['#00afaf', '37'],
-        \       'color15' : ['#5f8787', '66'],
-        \       'color16' : ['#5fafd7', '74'],
-        \       'color17' : ['#d7af00', '178'],
-        \       'cursor_fg' : ['#1c1c1c', '234'],
-        \       'cursor_bg' : ['#c6c6c6', '251'],
-        \       'cursorline' : ['#303030', '236'],
-        \       'cursorcolumn' : ['#303030', '236'],
-        \       'cursorlinenr_fg' : ['#ffff00', '226'],
-        \       'cursorlinenr_bg' : ['#1c1c1c', '234'],
-        \       'popupmenu_fg' : ['#c6c6c6', '251'],
-        \       'popupmenu_bg' : ['#303030', '236'],
-        \       'search_fg' : ['#000000', '16'],
-        \       'search_bg' : ['#00875f', '29'],
-        \       'linenumber_fg' : ['#585858', '240'],
-        \       'linenumber_bg' : ['#1c1c1c', '234'],
-        \       'vertsplit_fg' : ['#5f8787', '66'],
-        \       'vertsplit_bg' : ['#1c1c1c', '234'],
-        \       'statusline_active_fg' : ['#1c1c1c', '234'],
-        \       'statusline_active_bg' : ['#5f8787', '66'],
-        \       'statusline_inactive_fg' : ['#bcbcbc', '250'],
-        \       'statusline_inactive_bg' : ['#3a3a3a', '237'],
-        \       'todo_fg' : ['#ff8700', '208'],
-        \       'todo_bg' : ['#1c1c1c', '234'],
-        \       'error_fg' : ['#af005f', '125'],
-        \       'error_bg' : ['#5f0000', '52'],
-        \       'matchparen_bg' : ['#4e4e4e', '239'],
-        \       'matchparen_fg' : ['#c6c6c6', '251'],
-        \       'visual_fg' : ['#000000', '16'],
-        \       'visual_bg' : ['#8787af', '103'],
-        \       'folded_fg' : ['#d787ff', '177'],
-        \       'folded_bg' : ['#5f005f', '53'],
-        \       'wildmenu_fg': ['#1c1c1c', '234'],
-        \       'wildmenu_bg': ['#afd700', '148'],
-        \       'spellbad':   ['#5f0000', '52'],
-        \       'spellcap':   ['#5f005f', '53'],
-        \       'spellrare':  ['#005f00', '22'],
-        \       'spelllocal': ['#00005f', '17'],
-        \       'diffadd_fg':    ['#87d700', '112'],
-        \       'diffadd_bg':    ['#005f00', '22'],
-        \       'diffdelete_fg': ['#af005f', '125'],
-        \       'diffdelete_bg': ['#5f0000', '52'],
-        \       'difftext_fg':   ['#5fffff', '87'],
-        \       'difftext_bg':   ['#008787', '30'],
-        \       'diffchange_fg': ['#d0d0d0', '252'],
-        \       'diffchange_bg': ['#005f5f', '23'],
-        \       'tabline_bg':          ['#262626', '235'],
-        \       'tabline_active_fg':   ['#121212', '233'],
-        \       'tabline_active_bg':   ['#00afaf', '37'],
-        \       'tabline_inactive_fg': ['#bcbcbc', '250'],
-        \       'tabline_inactive_bg': ['#585858', '240'],
-        \       'buftabline_bg':          ['#262626', '235'],
-        \       'buftabline_current_fg':  ['#121212', '233'],
-        \       'buftabline_current_bg':  ['#00afaf', '37'],
-        \       'buftabline_active_fg':   ['#00afaf', '37'],
-        \       'buftabline_active_bg':   ['#585858', '240'],
-        \       'buftabline_inactive_fg': ['#bcbcbc', '250'],
-        \       'buftabline_inactive_bg': ['#585858', '240']
         \     }
         \   }
 endfun
@@ -226,57 +136,16 @@ endfun
 "   s:options          <dictionary> user options
 fun! s:acquire_theme_data()
   
-  " Get theme name: {{{
+  " Get theme name
   let s:theme_name = 'default'
 
-  if exists("g:PaperColor_Theme") " Users expressed theme preference
-    let lowercase_theme_name = tolower(g:PaperColor_Theme)
+  " Defer loading default theme until now
+  call s:register_default_theme()
 
-    if lowercase_theme_name !=? 'default'
-      let theme_identifier = 'PaperColor_' . lowercase_theme_name
-      let autoload_function = theme_identifier . '#register'
-
-      call {autoload_function}()
-
-      let theme_variable = 'g:' . theme_identifier
-
-      if exists(theme_variable)
-        let s:theme_name = lowercase_theme_name
-        let s:themes[s:theme_name] = {theme_variable}
-      endif
-
-    endif
-
-  endif
-  " }}}
-
-  if s:theme_name ==? 'default'
-    " Either no other theme is specified or they failed to load
-    " Defer loading default theme until now
-    call s:register_default_theme()
-  endif
-
-  let s:selected_theme = s:themes[s:theme_name]
+  let s:selected_theme = s:themes['default']
 
   " Get Theme Variant: either dark or light  {{{
-  let s:selected_variant = 'dark'
-
-  let s:is_dark=(&background == 'dark')
-
-  if s:is_dark
-    if has_key(s:selected_theme, 'dark')
-      let s:selected_variant = 'dark'
-    else " in case the theme only provides the other variant
-      let s:selected_variant = 'light'
-    endif
-
-  else " is light background
-    if has_key(s:selected_theme, 'light')
-      let s:selected_variant = 'light'
-    else " in case the theme only provides the other variant
-      let s:selected_variant = 'dark'
-    endif
-  endif
+  let s:selected_variant = 'light'
 
   let s:palette = s:selected_theme[s:selected_variant].palette
 
@@ -591,7 +460,7 @@ fun! s:load_GUI_to_256_converter()
       elseif a:n == 4
         return 139
       elseif a:n == 5
-        return 162
+        return 125
       elseif a:n == 6
         return 185
       elseif a:n == 7
@@ -1111,14 +980,7 @@ fun! s:apply_syntax_highlightings()
 
   if s:themeOpt_transparent_background
     exec 'hi Normal' . s:fg_foreground
-    " Switching between dark & light variant through `set background`
-    " NOTE: Handle background switching right after `Normal` group because of
-    " God-know-why reason. Not doing this way had caused issue before
-    if s:is_dark " DARK VARIANT
-      set background=dark
-    else " LIGHT VARIANT
-      set background=light
-    endif
+	set background=light
 
     exec 'hi NonText' . s:fg_nontext
     exec 'hi LineNr' . s:fg_linenumber_fg
@@ -1127,12 +989,7 @@ fun! s:apply_syntax_highlightings()
     exec 'hi FoldColumn' . s:fg_folded_fg . s:bg_transparent . s:ft_none
   else
     exec 'hi Normal' . s:fg_foreground . s:bg_background
-    " Switching between dark & light variant through `set background`
-    if s:is_dark " DARK VARIANT
-      set background=dark
-    else " LIGHT VARIANT
-      set background=light
-    endif
+	set background=light
 
     exec 'hi NonText' . s:fg_nontext . s:bg_background
     exec 'hi LineNr' . s:fg_linenumber_fg . s:bg_linenumber_bg
